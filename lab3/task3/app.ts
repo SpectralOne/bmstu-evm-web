@@ -20,23 +20,11 @@ function get_file_content(fname: string): string {
 }
 
 let ext: string = get_line("Enter file ext: ");
-if (ext !== '') {
-  if (!ext.startsWith(".")) {
-    ext = "." + ext;
-  }
-  const input_path: string = get_line("Enter path: ");
-  if (input_path !== '') {
-    const files: string[] = get_files(input_path, ext);
-    if (files.length !== 0) {
-      for (const file of files) {
-        console.log(`file: ${file}\ncontent:\n${get_file_content(file)}\n`);
-      }
-    } else {
-      console.log("Error occured of no files were found!");
-    }
-  } else {
-    console.log("Empty path!");
-  }
-} else {
-  console.log("No ext specified!");
+if (!ext.startsWith(".")) {
+  ext = "." + ext;
+}
+const input_path: string = get_line("Enter path: ");
+const files: string[] = get_files(input_path, ext);
+for (const file of files) {
+  console.log(`file: ${file}\ncontent:\n${get_file_content(file)}\n`);
 }
