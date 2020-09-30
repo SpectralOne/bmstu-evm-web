@@ -1,3 +1,21 @@
 node_modules/
+.shadow-cljs/
 coverage/
+*/public/js
 dist/
+out/
+.cpcache
+
+
+# *.log
+# /target
+# *-init.clj
+# /public/js/
+# public/test/
+# .nrepl-port
+# .lein-failures
+# out
+# target/
+# .shadow-cljs/
+# yarn.lock
+# /.idea
