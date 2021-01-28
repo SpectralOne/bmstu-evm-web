@@ -5,7 +5,7 @@ coverage/
 dist/
 out/
 .cpcache
-
+*.txt
 
 # *.log
 # /target

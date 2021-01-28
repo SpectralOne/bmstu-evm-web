@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title>Lab 6</title>
+</head>
+
+<body>
+    <%- include("navbar.ejs", { page: "Home" }) %>
+    <div class="card">
+        <h1>Games</h1>
+        <form method="GET" action="/games">
+            <label for="age"></label>
+            <input type="text" name="age" placeholder="Enter age...">
+            <button type="submit">Check!</button>
+        </form>
+    </div>
+
+</body>
+</html>

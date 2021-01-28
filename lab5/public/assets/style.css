@@ -1,0 +1,103 @@
+header {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 3em;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 2em !important;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white !important;
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+input {
+    justify-self: center;
+    background-color: white;
+    color: #060818;
+    padding: 1em;
+    font-size: 1em;
+    margin-bottom: 0.3em;
+}
+
+button {
+    cursor: pointer;
+    background: honeydew;
+    border-radius: 0.5em;
+    padding: 1em 4em;
+    margin-top: 0.1em;
+}
+
+h1 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    color: honeydew;
+}
+
+form {
+    text-align: center;
+    margin-top: 1em;
+}
+
+ul {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  list-style: inside;
+}
+
+li {
+  display: inline;
+}
+
+p.t1 {
+    font-size: 2em;
+}
+
+a.home-url, a.home-url:link, a.home-url:visited, a.home-url:focus, a.home-url:hover, a.home-url:active {
+    background-color: black;
+    color: honeydew;
+    text-align: center;
+    width: 10%;
+    display: inline-block;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+
+li:last-child a {
+  margin-right: 0;
+}
+
+a:link, a:visited, a:focus {
+  background: yellow;
+}
+
+a:hover {     
+  background: orange;
+}
+
+a:active {
+  background: red;
+  color: white;
+}

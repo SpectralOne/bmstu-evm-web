@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "task1/A/src/**/*",
+    "task1/B/src/**/*",
+    "task1/C/src/**/*",
+    "task2/*", "task1/interfaces"
+  ]
+}

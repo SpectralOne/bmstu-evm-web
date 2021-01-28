@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title>Personal</title>
+</head>
+
+<body>
+    <%- include("navbar.ejs", { page: "personal" }) %>
+    <% if (error) {%>
+    <div class="err-card">
+        <h1><%=error%></h1>
+    </div>
+    <%}%>
+
+    <% if (isAuth) {%>
+    <div class="card">
+        <h1>User</h1>
+        <p>Login: <%= user.login %></p>
+        <p>Password: <%= user.pass %></p>
+        <p>Hobby: <%= user.hobby %></p>
+        <p>Age: <%= user.age %></p>
+    </div>
+    <form>
+        <a href="/exit">Exit</a>
+    </form>
+    <%} else {%>
+    <form METHOD="POST" action="/login">
+        <label for="login"></label>
+        <input type="text" name="login" placeholder="Login" spellcheck="false" autocomplete="off">
+        <br>
+        <label for="password"></label>
+        <input type="password" name="pass" placeholder="Password" spellcheck="false" autocomplete="off">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <%}%>
+
+</body>
+</html>

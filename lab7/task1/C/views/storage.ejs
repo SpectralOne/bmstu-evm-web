@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title>Stock <%= storage.name %></title>
+</head>
+
+<body>
+    <%- include("navbar.ejs", { page: "car" }) %>
+    <% if (error) { %>
+    <div">
+        <h1><%=error%></h1>
+    </div>
+    <% } else { %>
+    <div class="card">
+        <h1>Found storage <span class="inv"><%=storage.name%></span>!</h1>
+        <% if (storage.cars.length) { %>
+        <h1>Cars:</h1>
+        <% for (const car of storage.cars) { %>
+        <div class="card">
+            <p>Name: <%=car%></p>
+        </div>
+        <% } %>
+        <% } else { %>
+        <div>
+            <h1>No cars in storage!</h1>
+        </div>
+        <% } %>
+    </div>
+    <% } %>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title>Search car</title>
+</head>
+
+<body>
+    <%- include("navbar.ejs", { page: "cinfo" }) %>
+    <div class="card">
+        <h1>Here you can find any car I have!</h1>
+        <form method="GET" action="/car">
+            <input type="text" name="name" placeholder="Enter name...">
+            <br>
+            <button type="submit">Find</button>
+        </form>
+    </div>
+
+</body>
+</html>

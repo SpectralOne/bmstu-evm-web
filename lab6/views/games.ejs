@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style.css">
+<title>Games</title>
+</head>
+
+<body>
+    <%- include("navbar.ejs", { page: "games" }) %>
+
+    <% if (error) {%>
+    <div class="err-card">
+        <h1><%=error%></h1>
+    </div>
+    <% } %>
+
+    <% for (const game of games) { %>
+    <div class="card">
+        <h1 style="text-align: center"><%= game.name %></h1>
+        <p >Description: <%= game.desc %></p>
+        <p >Age: <%= game.age %></p>
+    </div>
+    <% } %>
+
+</body>
+</html>
